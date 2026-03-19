@@ -1,0 +1,65 @@
+appId: com.dex.app
+productName: Dex
+copyright: Copyright © 2026 Dex
+
+directories:
+  buildResources: build
+  output: release
+
+files:
+  - out/**/*
+  - "!out/renderer/**/*"
+  - out/renderer/index.html
+  - out/renderer/quick-capture.html
+  - out/renderer/assets/**/*
+
+mac:
+  category: public.app-category.productivity
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+    - target: zip
+      arch:
+        - x64
+        - arm64
+  darkModeSupport: true
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    NSMicrophoneUsageDescription: Dex needs microphone access for voice capture.
+
+dmg:
+  artifactName: Dex-${version}-${arch}.dmg
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: Dex-Setup-${version}.exe
+
+nsis:
+  oneClick: true
+  perMachine: false
+  allowToChangeInstallationDirectory: false
+  deleteAppDataOnUninstall: false
+
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+  category: Utility
+  artifactName: Dex-${version}-${arch}.${ext}
+
+asar: true
+
+extraMetadata:
+  main: out/main/index.js
