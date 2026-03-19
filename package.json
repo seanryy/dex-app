@@ -3,6 +3,10 @@
   "productName": "Dex",
   "version": "0.1.0",
   "description": "Desktop interface for Dex — your personal knowledge system",
+  "author": {
+    "name": "Sean Ryan",
+    "email": "sean.ryan@pendo.io"
+  },
   "main": "out/main/index.js",
   "scripts": {
     "dev": "electron-vite dev",
