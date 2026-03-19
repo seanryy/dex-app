@@ -44,4 +44,4 @@ npm run dist:linux  # .AppImage + .deb
 
 ## License
 
-[PolyForm Noncommercial 1.0.0](LICENSE). Free for personal and noncommercial use. Commercial use requires a separate license.
+MIT License. 
