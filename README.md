@@ -1,6 +1,13 @@
-# Dex
+# Dex App
 
-Your personal knowledge system. Notes, tasks, meetings, AI chat, and agents — all in one place.
+Desktop interface for [Dex](https://github.com/davekilleen/dex) — your AI Chief of Staff. A native app that puts your vault, AI chat, agents, and quick capture in one window.
+
+## Prerequisites
+
+1. **Set up Dex first** — follow the [main Dex repo](https://github.com/davekilleen/dex) instructions to clone the vault, run `/setup`, and configure your role
+2. **Get a Claude API key** — from [console.anthropic.com](https://console.anthropic.com/)
+3. **Node.js 20+** — [download here](https://nodejs.org/)
+4. **Xcode Command Line Tools** (macOS) — `xcode-select --install`
 
 ## Setup
 
@@ -11,13 +18,11 @@ npm install
 npm run dev
 ```
 
-Requires [Node.js](https://nodejs.org/) 20+ and Xcode Command Line Tools (`xcode-select --install`) for native modules.
+Once the app opens, go to **Settings** (`Cmd+6`) and:
 
-Once the app is running, open **Settings** (`Cmd+6`) and:
-
-1. **Set your Vault location** — point Dex to a folder of markdown files (notes, tasks, meetings, etc.)
-2. **Add your Claude API key** — get one from [console.anthropic.com](https://console.anthropic.com/) (required for Chat and Agents)
-3. **Configure MCP servers** *(optional)* — add a `.mcp.json` file in your vault root to connect external tools
+1. **Set your Vault location** — point to your Dex vault folder
+2. **Add your Claude API key** — paste your key from Anthropic
+3. **Configure MCP servers** *(optional)* — reads `.mcp.json` from your vault root
 
 ## Build
 
@@ -36,3 +41,7 @@ npm run dist:linux  # .AppImage + .deb
 | `Cmd + K`                  | Command palette     |
 | `Cmd + S`                  | Save (Vault editor) |
 | `Enter`                    | Save (Quick Capture)|
+
+## License
+
+[PolyForm Noncommercial 1.0.0](LICENSE). Free for personal and noncommercial use. Commercial use requires a separate license.
