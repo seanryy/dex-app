@@ -1,4 +1,4 @@
-# Dex App
+# Dex Desktop
 
 Desktop interface for [Dex](https://github.com/davekilleen/dex) — your AI Chief of Staff. A native app that puts your vault, AI chat, agents, and quick capture in one window.
 
