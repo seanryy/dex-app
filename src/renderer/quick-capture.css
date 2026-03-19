@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ── Theme Variables (shared with main app) ─────────────────── */
+
+:root {
+  --accent-h: 239;
+  --accent-s: 84%;
+  --accent-l: 67%;
+}
+
+:root, [data-theme="dark"] {
+  --color-surface-0: #09090b;
+  --color-surface-1: #18181b;
+  --color-surface-2: #27272a;
+  --color-surface-3: #3f3f46;
+  --color-border: #27272a;
+  --color-border-hover: #3f3f46;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-tertiary: #71717a;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%));
+  --color-accent-muted: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1);
+  --color-success: #22c55e;
+}
+
+[data-theme="light"] {
+  --color-surface-0: #ffffff;
+  --color-surface-1: #f4f4f5;
+  --color-surface-2: #e4e4e7;
+  --color-surface-3: #d4d4d8;
+  --color-border: #e4e4e7;
+  --color-border-hover: #d4d4d8;
+  --color-text-primary: #09090b;
+  --color-text-secondary: #52525b;
+  --color-text-tertiary: #a1a1aa;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 5%));
+  --color-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 15%));
+  --color-accent-muted: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1);
+  --color-success: #16a34a;
+}
+
+@theme {
+  --color-surface-0: var(--color-surface-0);
+  --color-surface-1: var(--color-surface-1);
+  --color-surface-2: var(--color-surface-2);
+  --color-surface-3: var(--color-surface-3);
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-tertiary: var(--color-text-tertiary);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-muted: var(--color-accent-muted);
+  --color-success: var(--color-success);
+}
+
+/* ── Quick Capture Base ─────────────────────────────────────── */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
