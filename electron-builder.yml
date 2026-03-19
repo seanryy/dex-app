@@ -25,10 +25,7 @@ mac:
         - x64
         - arm64
   darkModeSupport: true
-  hardenedRuntime: true
-  gatekeeperAssess: false
-  entitlements: build/entitlements.mac.plist
-  entitlementsInherit: build/entitlements.mac.plist
+  identity: null
   extendInfo:
     NSMicrophoneUsageDescription: Dex needs microphone access for voice capture.
 
